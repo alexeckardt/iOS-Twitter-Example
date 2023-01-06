@@ -14,7 +14,7 @@ struct FeedView: View {
         ScrollView {
             LazyVStack {
                 ForEach(0 ... 20, id: \.self) { i in
-                    Text("Tweet " + String(i))
+                    TweetRowView()
                 }
             }
         }

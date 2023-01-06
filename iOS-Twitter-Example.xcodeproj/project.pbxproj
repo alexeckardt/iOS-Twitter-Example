@@ -12,6 +12,8 @@
 		0870C7112967921E00E95533 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0870C7102967921E00E95533 /* Assets.xcassets */; };
 		0870C7152967921E00E95533 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0870C7142967921E00E95533 /* Preview Assets.xcassets */; };
 		0870C7212967927C00E95533 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870C7202967927C00E95533 /* FeedView.swift */; };
+		0870C7272967940B00E95533 /* TweetRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870C7262967940B00E95533 /* TweetRowView.swift */; };
+		0870C72A29679CAD00E95533 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870C72929679CAD00E95533 /* MainTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		0870C7122967921E00E95533 /* iOS_Twitter_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOS_Twitter_Example.entitlements; sourceTree = "<group>"; };
 		0870C7142967921E00E95533 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0870C7202967927C00E95533 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		0870C7262967940B00E95533 /* TweetRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetRowView.swift; sourceTree = "<group>"; };
+		0870C72929679CAD00E95533 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		0870C70B2967921D00E95533 /* iOS-Twitter-Example */ = {
 			isa = PBXGroup;
 			children = (
+				0870C722296793D100E95533 /* Components */,
 				0870C71B2967922300E95533 /* Core */,
 				0870C70C2967921D00E95533 /* iOS_Twitter_ExampleApp.swift */,
 				0870C70E2967921D00E95533 /* ContentView.swift */,
@@ -75,6 +80,10 @@
 		0870C71B2967922300E95533 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				0870C72E29679DBB00E95533 /* Profile */,
+				0870C72D29679DA900E95533 /* Notifcations */,
+				0870C72C29679DA400E95533 /* Explorer */,
+				0870C72829679C9600E95533 /* MainTab */,
 				0870C71C2967922800E95533 /* Feed */,
 			);
 			path = Core;
@@ -94,6 +103,51 @@
 				0870C7202967927C00E95533 /* FeedView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0870C722296793D100E95533 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0870C723296793DD00E95533 /* Tweets */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0870C723296793DD00E95533 /* Tweets */ = {
+			isa = PBXGroup;
+			children = (
+				0870C7262967940B00E95533 /* TweetRowView.swift */,
+			);
+			path = Tweets;
+			sourceTree = "<group>";
+		};
+		0870C72829679C9600E95533 /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				0870C72929679CAD00E95533 /* MainTabView.swift */,
+			);
+			path = MainTab;
+			sourceTree = "<group>";
+		};
+		0870C72C29679DA400E95533 /* Explorer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Explorer;
+			sourceTree = "<group>";
+		};
+		0870C72D29679DA900E95533 /* Notifcations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Notifcations;
+			sourceTree = "<group>";
+		};
+		0870C72E29679DBB00E95533 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,8 +221,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0870C70F2967921D00E95533 /* ContentView.swift in Sources */,
+				0870C7272967940B00E95533 /* TweetRowView.swift in Sources */,
 				0870C7212967927C00E95533 /* FeedView.swift in Sources */,
 				0870C70D2967921D00E95533 /* iOS_Twitter_ExampleApp.swift in Sources */,
+				0870C72A29679CAD00E95533 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
