@@ -15,23 +15,7 @@ struct SideMenuView: View {
             profileInfo
                 .padding(.leading)
             
-            //Rows
-            ForEach(SideMenuViewModel.allCases, id: \.rawValue) { option in
-                
-                //One Row
-                HStack(spacing: 14) {
-                    Image(systemName: option.imageName)
-                        .font(.headline)
-                        .foregroundColor(.gray)
-                    
-                    Text(option.description)
-                        .font(.subheadline)
-                    
-                    Spacer()
-                }
-                .frame(height: 40)
-                .padding(.horizontal)
-            }
+            rowButtons
             
             Spacer()
         }
@@ -79,4 +63,39 @@ extension SideMenuView {
     //
     //
     //
+    
+    var rowButtons: some View {
+        
+        //Rows
+        ForEach(SideMenuViewModel.allCases, id: \.rawValue) { option in
+            
+            // Go To Profile
+            if option == .profile {
+                NavigationLink {
+                    ProfileView()
+                } label: {
+                    SideMenuOptionRowView(viewModel: option)
+                }
+            } else
+            
+            // Logout BUTTON!
+            
+            if option == .logout {
+                Button {
+                    
+                    //Handel logout here
+                    print("Logged out")
+                    
+                } label: {
+                    SideMenuOptionRowView(viewModel: option)
+                }
+            }
+            
+            //Others
+            
+            else {
+                SideMenuOptionRowView(viewModel: option)
+            }
+        }
+    }
 }

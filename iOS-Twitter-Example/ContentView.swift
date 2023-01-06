@@ -36,7 +36,7 @@ struct ContentView: View {
             //
             SideMenuView()
                 .frame(width:sidebarWidth)
-                .background(Color.red)
+                .background(Color.white)
                 .offset(x: sidebarVisible ? 0 : -sidebarWidth)
                 
         }
@@ -60,6 +60,9 @@ struct ContentView: View {
                         .frame(width:48)
                 }
             }
+        }
+        .onAppear {
+            sidebarVisible = false;
         }
     }
 }
