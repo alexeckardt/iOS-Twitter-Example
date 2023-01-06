@@ -34,7 +34,9 @@ struct FeedView: View {
                     .frame(width: 84)
                     .padding()
                     .fullScreenCover(isPresented: $showNewTweetView) {
-                        Text("New tweet")
+                        
+                        UploadTweetView()
+                        
                     }
                 
             }
