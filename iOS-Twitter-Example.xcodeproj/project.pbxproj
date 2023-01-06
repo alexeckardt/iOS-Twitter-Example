@@ -20,6 +20,9 @@
 		0870C73B29679F4A00E95533 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870C73A29679F4A00E95533 /* ProfileView.swift */; };
 		0870C73D2967A56F00E95533 /* TweetFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870C73C2967A56F00E95533 /* TweetFilterViewModel.swift */; };
 		0870C7422968A6C300E95533 /* UserRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870C7412968A6C300E95533 /* UserRowView.swift */; };
+		0870C7472968AA0800E95533 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870C7462968AA0800E95533 /* SideMenuView.swift */; };
+		0870C7492968AA4800E95533 /* SideMenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870C7482968AA4800E95533 /* SideMenuRowView.swift */; };
+		0870C74B2968AA5A00E95533 /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870C74A2968AA5A00E95533 /* SideMenuViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		0870C73A29679F4A00E95533 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0870C73C2967A56F00E95533 /* TweetFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetFilterViewModel.swift; sourceTree = "<group>"; };
 		0870C7412968A6C300E95533 /* UserRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRowView.swift; sourceTree = "<group>"; };
+		0870C7462968AA0800E95533 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		0870C7482968AA4800E95533 /* SideMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuRowView.swift; sourceTree = "<group>"; };
+		0870C74A2968AA5A00E95533 /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,7 @@
 		0870C71B2967922300E95533 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				0870C7432968A9EB00E95533 /* Side Menu */,
 				0870C73529679E3F00E95533 /* Messages */,
 				0870C72E29679DBB00E95533 /* Profile */,
 				0870C72D29679DA900E95533 /* Notifcations */,
@@ -216,6 +223,32 @@
 			path = Users;
 			sourceTree = "<group>";
 		};
+		0870C7432968A9EB00E95533 /* Side Menu */ = {
+			isa = PBXGroup;
+			children = (
+				0870C7452968A9F500E95533 /* Views */,
+				0870C7442968A9F000E95533 /* View Model */,
+			);
+			path = "Side Menu";
+			sourceTree = "<group>";
+		};
+		0870C7442968A9F000E95533 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				0870C74A2968AA5A00E95533 /* SideMenuViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		0870C7452968A9F500E95533 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0870C7462968AA0800E95533 /* SideMenuView.swift */,
+				0870C7482968AA4800E95533 /* SideMenuRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -289,11 +322,14 @@
 				0870C73729679E4A00E95533 /* MessagesView.swift in Sources */,
 				0870C73B29679F4A00E95533 /* ProfileView.swift in Sources */,
 				0870C70F2967921D00E95533 /* ContentView.swift in Sources */,
+				0870C7492968AA4800E95533 /* SideMenuRowView.swift in Sources */,
 				0870C7272967940B00E95533 /* TweetRowView.swift in Sources */,
 				0870C73D2967A56F00E95533 /* TweetFilterViewModel.swift in Sources */,
 				0870C7212967927C00E95533 /* FeedView.swift in Sources */,
+				0870C7472968AA0800E95533 /* SideMenuView.swift in Sources */,
 				0870C70D2967921D00E95533 /* iOS_Twitter_ExampleApp.swift in Sources */,
 				0870C72A29679CAD00E95533 /* MainTabView.swift in Sources */,
+				0870C74B2968AA5A00E95533 /* SideMenuViewModel.swift in Sources */,
 				0870C7422968A6C300E95533 /* UserRowView.swift in Sources */,
 				0870C73029679E0800E95533 /* ExplorerView.swift in Sources */,
 				0870C73429679E3400E95533 /* NotificationsView.swift in Sources */,
