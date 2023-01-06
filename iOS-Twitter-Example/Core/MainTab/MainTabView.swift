@@ -26,7 +26,7 @@ struct MainTabView: View {
                 .tag(0)
             
             //
-            FeedView()
+            ExplorerView()
                 .onTapGesture {
                     self.selectedIndex = 1;
                 }
@@ -36,7 +36,7 @@ struct MainTabView: View {
                 .tag(1)
             
             //
-            FeedView()
+            NotificationsView()
                 .onTapGesture {
                     self.selectedIndex = 2;
                 }
@@ -46,7 +46,7 @@ struct MainTabView: View {
                 .tag(2)
             
             //
-            FeedView()
+            MessagesView()
                 .onTapGesture {
                     self.selectedIndex = 3;
                 }
