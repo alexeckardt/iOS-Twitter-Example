@@ -32,7 +32,8 @@ struct UserRowView: View {
             Spacer()
             
         }
-        .padding()
+        .padding(.horizontal)
+        .padding(.vertical, 4)
         
     }
 }
