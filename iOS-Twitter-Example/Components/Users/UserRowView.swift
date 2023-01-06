@@ -21,6 +21,7 @@ struct UserRowView: View {
                 
                 Text("joker")
                     .font(.subheadline).bold()
+                    .foregroundColor(.black)
                 
                 Text("Heath Ledger")
                     .font(.subheadline)

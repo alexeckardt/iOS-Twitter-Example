@@ -11,6 +11,7 @@ struct ProfileView: View {
     
     @State private var selectedFilter: TweetFilterViewModel = .tweets
     @Namespace var animation;
+    @Environment(\.presentationMode) var mode;
     
     
     let pfpSize : CGFloat = 90
@@ -68,7 +69,8 @@ extension ProfileView {
                 //Back Arrow Button
                 Button {
                     
-                    //Do Stuff
+                    //Exit the Current Page, Return to previous view
+                    mode.wrappedValue.dismiss()
                     
                 } label: {
                     //Image
@@ -77,7 +79,7 @@ extension ProfileView {
                         .frame(width:20, height: 16)
                         .foregroundColor(.white)
                 }
-                .offset(x: 16, y: 0)
+                .offset(x: 16, y: 12)
                 
                 
                 //Profile Picture
