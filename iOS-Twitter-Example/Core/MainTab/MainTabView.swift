@@ -31,7 +31,7 @@ struct MainTabView: View {
                     self.selectedIndex = 1;
                 }
                 .tabItem {
-                    Image(systemName: "house")
+                    Image(systemName: "magnifyingglass")
                 }
                 .tag(1)
             
@@ -41,7 +41,7 @@ struct MainTabView: View {
                     self.selectedIndex = 2;
                 }
                 .tabItem {
-                    Image(systemName: "house")
+                    Image(systemName: "bell")
                 }
                 .tag(2)
             
@@ -51,7 +51,7 @@ struct MainTabView: View {
                     self.selectedIndex = 3;
                 }
                 .tabItem {
-                    Image(systemName: "house")
+                    Image(systemName: "envelope")
                 }
                 .tag(3)
             
