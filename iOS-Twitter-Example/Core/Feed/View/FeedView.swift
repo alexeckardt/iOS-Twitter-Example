@@ -8,14 +8,35 @@
 import SwiftUI
 
 struct FeedView: View {
+    
+    @State private var showNewTweetView = false;
+    
     var body: some View {
         
         //Scrollable
-        ScrollView {
-            LazyVStack {
-                ForEach(0 ... 20, id: \.self) { i in
-                    TweetRowView()
+        ZStack(alignment: .bottomTrailing) {
+            
+            ScrollView {
+                LazyVStack {
+                    ForEach(0 ... 20, id: \.self) { i in
+                        TweetRowView()
+                    }
                 }
+            }
+            
+            //New Tweet
+            Button {
+                showNewTweetView.toggle()
+            } label: {
+                //shouldbe image
+                Circle()
+                    .foregroundColor(.blue)
+                    .frame(width: 84)
+                    .padding()
+                    .fullScreenCover(isPresented: $showNewTweetView) {
+                        Text("New tweet")
+                    }
+                
             }
         }
     }

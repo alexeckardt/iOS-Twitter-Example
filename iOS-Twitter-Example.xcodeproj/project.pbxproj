@@ -102,6 +102,7 @@
 		0870C71B2967922300E95533 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				0870C7522968BB1000E95533 /* UploadTweet */,
 				0870C7432968A9EB00E95533 /* Side Menu */,
 				0870C73529679E3F00E95533 /* Messages */,
 				0870C72E29679DBB00E95533 /* Profile */,
@@ -251,6 +252,29 @@
 				0870C7462968AA0800E95533 /* SideMenuView.swift */,
 				0870C7502968B44C00E95533 /* SideMenuOptionRowView.swift */,
 				0870C7482968AA4800E95533 /* SideMenuRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0870C7522968BB1000E95533 /* UploadTweet */ = {
+			isa = PBXGroup;
+			children = (
+				0870C7542968BB1D00E95533 /* Views */,
+				0870C7532968BB1800E95533 /* ViewModels */,
+			);
+			path = UploadTweet;
+			sourceTree = "<group>";
+		};
+		0870C7532968BB1800E95533 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0870C7542968BB1D00E95533 /* Views */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Views;
 			sourceTree = "<group>";
