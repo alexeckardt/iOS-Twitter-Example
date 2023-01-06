@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ProfileView: View {
     
+    @State private var selectedFilter: TweetFilterViewModel = .tweets
+    
     let pfpSize : CGFloat = 90
     
     var body: some View {
@@ -21,6 +23,38 @@ struct ProfileView: View {
             ActionButtons
             
             ProfileInfo
+            
+            HStack {
+                
+                //Loop Over Every cas in the Enum, Use it's Title Property
+                ForEach(TweetFilterViewModel.allCases, id: \.rawValue) { item in
+                    VStack {
+                        
+                        var meSelected : Bool = selectedFilter == item
+                        
+                        
+                        //Name of the Filter
+                        Text(item.title)
+                            .font(.subheadline)
+                            .fontWeight(meSelected ? .semibold : .regular)
+                            .foregroundColor(meSelected ? .black : Color(.systemGray))
+                        
+
+                        Capsule()
+                            .foregroundColor(meSelected ? Color(.systemBlue) : .clear)
+                            .frame(height: 3)
+                        
+                    }
+                    .onTapGesture {
+                        //Press Event, Smooth Transition
+                        withAnimation(.easeInOut) {
+                            self.selectedFilter = item
+                        }
+                    }
+                    
+                    
+                }
+            }
             
             //Push
             Spacer()

@@ -18,6 +18,7 @@
 		0870C73429679E3400E95533 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870C73329679E3400E95533 /* NotificationsView.swift */; };
 		0870C73729679E4A00E95533 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870C73629679E4A00E95533 /* MessagesView.swift */; };
 		0870C73B29679F4A00E95533 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870C73A29679F4A00E95533 /* ProfileView.swift */; };
+		0870C73D2967A56F00E95533 /* TweetFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870C73C2967A56F00E95533 /* TweetFilterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		0870C73329679E3400E95533 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		0870C73629679E4A00E95533 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 		0870C73A29679F4A00E95533 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		0870C73C2967A56F00E95533 /* TweetFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetFilterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 		0870C73829679F3300E95533 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0870C73C2967A56F00E95533 /* TweetFilterViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				0870C73B29679F4A00E95533 /* ProfileView.swift in Sources */,
 				0870C70F2967921D00E95533 /* ContentView.swift in Sources */,
 				0870C7272967940B00E95533 /* TweetRowView.swift in Sources */,
+				0870C73D2967A56F00E95533 /* TweetFilterViewModel.swift in Sources */,
 				0870C7212967927C00E95533 /* FeedView.swift in Sources */,
 				0870C70D2967921D00E95533 /* iOS_Twitter_ExampleApp.swift in Sources */,
 				0870C72A29679CAD00E95533 /* MainTabView.swift in Sources */,
