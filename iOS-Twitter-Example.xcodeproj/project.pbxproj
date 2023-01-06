@@ -27,6 +27,9 @@
 		0870C7512968B44C00E95533 /* SideMenuOptionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870C7502968B44C00E95533 /* SideMenuOptionRowView.swift */; };
 		0870C7562968BB3E00E95533 /* UploadTweetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870C7552968BB3E00E95533 /* UploadTweetView.swift */; };
 		0870C7582968BC4A00E95533 /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870C7572968BC4A00E95533 /* TextArea.swift */; };
+		0870C75D2968D99500E95533 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870C75C2968D99500E95533 /* LoginView.swift */; };
+		0870C75F2968D9A200E95533 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870C75E2968D9A200E95533 /* RegistrationView.swift */; };
+		0870C7612968DF0300E95533 /* RoundedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870C7602968DF0300E95533 /* RoundedShape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		0870C7502968B44C00E95533 /* SideMenuOptionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionRowView.swift; sourceTree = "<group>"; };
 		0870C7552968BB3E00E95533 /* UploadTweetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetView.swift; sourceTree = "<group>"; };
 		0870C7572968BC4A00E95533 /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
+		0870C75C2968D99500E95533 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		0870C75E2968D9A200E95533 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		0870C7602968DF0300E95533 /* RoundedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,7 @@
 		0870C71B2967922300E95533 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				0870C75A2968D98700E95533 /* Auth */,
 				0870C7522968BB1000E95533 /* UploadTweet */,
 				0870C7432968A9EB00E95533 /* Side Menu */,
 				0870C73529679E3F00E95533 /* Messages */,
@@ -140,6 +147,7 @@
 				0870C7402968A6B000E95533 /* Users */,
 				0870C723296793DD00E95533 /* Tweets */,
 				0870C7572968BC4A00E95533 /* TextArea.swift */,
+				0870C7602968DF0300E95533 /* RoundedShape.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -285,6 +293,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		0870C75A2968D98700E95533 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				0870C75B2968D98B00E95533 /* View */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		0870C75B2968D98B00E95533 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0870C75C2968D99500E95533 /* LoginView.swift */,
+				0870C75E2968D9A200E95533 /* RegistrationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -314,6 +339,7 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
+				ORGANIZATIONNAME = "Alex Eckardt";
 				TargetAttributes = {
 					0870C7082967921D00E95533 = {
 						CreatedOnToolsVersion = 14.2;
@@ -369,10 +395,13 @@
 				0870C74B2968AA5A00E95533 /* SideMenuViewModel.swift in Sources */,
 				0870C7562968BB3E00E95533 /* UploadTweetView.swift in Sources */,
 				0870C7422968A6C300E95533 /* UserRowView.swift in Sources */,
+				0870C7612968DF0300E95533 /* RoundedShape.swift in Sources */,
 				0870C7512968B44C00E95533 /* SideMenuOptionRowView.swift in Sources */,
 				0870C73029679E0800E95533 /* ExplorerView.swift in Sources */,
+				0870C75D2968D99500E95533 /* LoginView.swift in Sources */,
 				0870C73429679E3400E95533 /* NotificationsView.swift in Sources */,
 				0870C74F2968AC3E00E95533 /* UserStatsView.swift in Sources */,
+				0870C75F2968D9A200E95533 /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
