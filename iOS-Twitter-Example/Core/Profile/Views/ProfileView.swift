@@ -10,6 +10,8 @@ import SwiftUI
 struct ProfileView: View {
     
     @State private var selectedFilter: TweetFilterViewModel = .tweets
+    @Namespace var animation;
+    
     
     let pfpSize : CGFloat = 90
     
@@ -18,43 +20,15 @@ struct ProfileView: View {
         VStack(alignment: .leading) {
             
             //banner + PFP
-            HeaderView
+            headerView
             
-            ActionButtons
+            actionButtons
             
-            ProfileInfo
+            profileInfo
             
-            HStack {
-                
-                //Loop Over Every cas in the Enum, Use it's Title Property
-                ForEach(TweetFilterViewModel.allCases, id: \.rawValue) { item in
-                    VStack {
-                        
-                        var meSelected : Bool = selectedFilter == item
-                        
-                        
-                        //Name of the Filter
-                        Text(item.title)
-                            .font(.subheadline)
-                            .fontWeight(meSelected ? .semibold : .regular)
-                            .foregroundColor(meSelected ? .black : Color(.systemGray))
-                        
-
-                        Capsule()
-                            .foregroundColor(meSelected ? Color(.systemBlue) : .clear)
-                            .frame(height: 3)
-                        
-                    }
-                    .onTapGesture {
-                        //Press Event, Smooth Transition
-                        withAnimation(.easeInOut) {
-                            self.selectedFilter = item
-                        }
-                    }
-                    
-                    
-                }
-            }
+            filterTabs
+            
+            tweetView
             
             //Push
             Spacer()
@@ -78,7 +52,7 @@ struct ProfileView_Previews: PreviewProvider {
 extension ProfileView {
     
     //
-    var HeaderView: some View {
+    var headerView: some View {
         
         //
         //Top Banner
@@ -120,7 +94,7 @@ extension ProfileView {
     //
     //
     
-    var ActionButtons: some View {
+    var actionButtons: some View {
         
         //
         HStack(spacing: 12) {
@@ -152,7 +126,7 @@ extension ProfileView {
     //
     //
     
-    var ProfileInfo : some View {
+    var profileInfo : some View {
         
         VStack(alignment: .leading, spacing: 4) {
             
@@ -201,5 +175,74 @@ extension ProfileView {
             
         }
         .padding()
+    }
+    
+    //
+    //
+    //
+    //
+    //
+    
+    var filterTabs : some View {
+        
+        HStack {
+            
+            //Loop Over Every cas in the Enum, Use it's Title Property
+            ForEach(TweetFilterViewModel.allCases, id: \.rawValue) { item in
+                VStack {
+                    
+                    let meSelected : Bool = selectedFilter == item
+                    
+                    //Name of the Filter
+                    Text(item.title)
+                        .font(.subheadline)
+                        .fontWeight(meSelected ? .semibold : .regular)
+                        .foregroundColor(meSelected ? .black : Color(.systemGray))
+                    
+                    if (meSelected) {
+                        //Move the Capsule
+                        Capsule()
+                            .foregroundColor(Color(.systemBlue))
+                            .frame(height: 3)
+                            .matchedGeometryEffect(id: "filter", in: animation)
+                        
+                    } else {
+                        //No Anim
+                        Capsule()
+                            .foregroundColor(.clear)
+                            .frame(height: 3)
+                    }
+                    
+                    
+                }
+                .onTapGesture {
+                    //Press Event, Smooth Transition
+                    withAnimation(.easeInOut) {
+                        self.selectedFilter = item
+                    }
+                }
+                
+                
+            }
+        }
+        .overlay(Divider().offset(x: 0, y: 16))
+        
+    }
+    
+    //
+    //
+    //
+    //
+    //
+    
+    var tweetView : some View {
+        
+        ScrollView {
+            LazyVStack {
+                ForEach(0 ... 3, id: \.self) { i in
+                    TweetRowView()
+                }
+            }.ignoresSafeArea()
+        }
     }
 }
