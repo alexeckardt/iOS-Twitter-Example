@@ -2,7 +2,7 @@
 //  ExplorerView.swift
 //  iOS-Twitter-Example
 //
-//  Created by Anita Eckardt on 2023-01-05.
+//  Created by Alex Eckardt on 2023-01-05.
 //
 
 import SwiftUI
