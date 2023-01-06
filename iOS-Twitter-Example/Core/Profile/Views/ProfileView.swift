@@ -13,12 +13,14 @@ struct ProfileView: View {
     
     var body: some View {
         
-        VStack {
+        VStack(alignment: .leading) {
             
             //banner + PFP
             HeaderView
             
             ActionButtons
+            
+            ProfileInfo
             
             //Push
             Spacer()
@@ -53,7 +55,7 @@ extension ProfileView {
             
             
             //Left Side of Banner
-            VStack {
+            VStack(alignment: .leading) {
                 
                 //Back Arrow Button
                 Button {
@@ -67,6 +69,7 @@ extension ProfileView {
                         .frame(width:20, height: 16)
                         .foregroundColor(.white)
                 }
+                .offset(x: 16, y: 0)
                 
                 
                 //Profile Picture
@@ -78,6 +81,10 @@ extension ProfileView {
         .frame(height: 98)
         
     }
+    
+    //
+    //
+    //
     
     var ActionButtons: some View {
         
@@ -92,9 +99,9 @@ extension ProfileView {
                 .overlay(Circle().stroke(Color.gray, lineWidth: 0.75))
             
             
-            //
+            // Edit Profile Button
             Button {
-                
+                // Do Something
             } label: {
                 Text("Edit Profile")
                     .font(.subheadline).bold()
@@ -105,5 +112,60 @@ extension ProfileView {
             }
             
         }.padding(.trailing)
+    }
+    
+    //
+    //
+    //
+    
+    var ProfileInfo : some View {
+        
+        VStack(alignment: .leading, spacing: 4) {
+            
+            HStack {
+                Text("Heath Ledger")
+                    .font(.title2).bold()
+                
+                Image(systemName: "checkmark.seal.fill")
+                    .foregroundColor(Color(.systemBlue))
+            }
+            
+            Text("@joker")
+                .font(.subheadline)
+                .foregroundColor(Color(.systemGray))
+            
+            Text("A Bio")
+                .font(.subheadline)
+                .padding(.vertical)
+            
+            //
+            //
+            HStack(spacing: 24) {
+                HStack(spacing: 4) {
+                    
+                    Text("872")
+                        .font(.subheadline)
+                        .bold()
+                    
+                    Text("Following")
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                    
+                }
+                HStack(spacing: 4) {
+                 
+                    Text("4.9M")
+                        .font(.subheadline)
+                        .bold()
+                    
+                    Text("Followers")
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                    
+                }
+            }
+            
+        }
+        .padding()
     }
 }
