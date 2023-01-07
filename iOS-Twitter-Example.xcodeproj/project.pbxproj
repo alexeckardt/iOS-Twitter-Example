@@ -31,6 +31,7 @@
 		0870C75F2968D9A200E95533 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870C75E2968D9A200E95533 /* RegistrationView.swift */; };
 		0870C7612968DF0300E95533 /* RoundedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870C7602968DF0300E95533 /* RoundedShape.swift */; };
 		0870C7652968EB8300E95533 /* IconTextInputFeild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870C7642968EB8300E95533 /* IconTextInputFeild.swift */; };
+		0870C7692968EE3400E95533 /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870C7682968EE3400E95533 /* AuthHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		0870C75E2968D9A200E95533 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		0870C7602968DF0300E95533 /* RoundedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShape.swift; sourceTree = "<group>"; };
 		0870C7642968EB8300E95533 /* IconTextInputFeild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTextInputFeild.swift; sourceTree = "<group>"; };
+		0870C7682968EE3400E95533 /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				0870C75B2968D98B00E95533 /* View */,
+				0870C7682968EE3400E95533 /* AuthHeaderView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				0870C75D2968D99500E95533 /* LoginView.swift in Sources */,
 				0870C73429679E3400E95533 /* NotificationsView.swift in Sources */,
 				0870C74F2968AC3E00E95533 /* UserStatsView.swift in Sources */,
+				0870C7692968EE3400E95533 /* AuthHeaderView.swift in Sources */,
 				0870C75F2968D9A200E95533 /* RegistrationView.swift in Sources */,
 				0870C7652968EB8300E95533 /* IconTextInputFeild.swift in Sources */,
 			);

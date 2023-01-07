@@ -17,7 +17,7 @@ struct LoginView: View {
         VStack {
             
             //Header
-            header
+            AuthHeaderView(title1: "Hello.", title2: "Welcome Back")
             
             //Text Feilds
             accountdetails
@@ -58,29 +58,7 @@ struct LoginView_Previews: PreviewProvider {
 }
 
 extension LoginView {
-    var header: some View {
-        
-        //Stack
-        VStack(alignment: .leading) {
-            
-            //Buffer
-            HStack { Spacer() }
-            
-            //Text
-            VStack(alignment: .leading) {
-                Text("Hello,")
-                Text("Welcome Back.")
-            }.font(.largeTitle).fontWeight(.semibold)
 
-        }
-        .frame(height: 260)
-        .padding(.leading)
-        .foregroundColor(.white)
-        .background(Color(.systemBlue))
-        //Bkg as Shape
-        .clipShape(RoundedShape(corners: [.bottomRight], cornerRadi: 80))
-    }
-    
     //
     //
     //
