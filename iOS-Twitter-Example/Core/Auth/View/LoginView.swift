@@ -89,10 +89,10 @@ extension LoginView {
         VStack(spacing: 40) {
             
             //Email
-            TextField("Email", text: $email)
+            IconTextInputFeild(imageName: "envelope", placeholderText: "Email", text: $email)
             
             //Password
-            TextField("Password", text: $password)
+            IconTextInputFeild(imageName: "key", placeholderText: "Password", text: $password)
         }
         .padding(.horizontal, 32)
         .padding(.top, 44)
